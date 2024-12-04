@@ -1,0 +1,17 @@
+name: Test
+on:
+  workflow_dispatch:
+    inputs:
+      flag:
+        type: boolean
+
+jobs:
+  notice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: suzuki-shunsuke/lock-action@v0.1.3
+        with:
+          mode: lock
+          key: aaa
+          post_unlock: true
+          ignore_already_locked_error: true
