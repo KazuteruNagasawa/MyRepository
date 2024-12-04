@@ -13,5 +13,5 @@ jobs:
         with:
           mode: lock
           key: aaa
-          post_unlock: true
-          ignore_already_locked_error: true
+          post_unlock: ${{ inputs.flag }}
+          ignore_already_locked_error: false
